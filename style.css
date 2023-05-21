@@ -1,0 +1,878 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Change font styles for p, text, h1, h2, buttons, etc. */
+
+/* Change font style for p */
+p {
+  font-family: Arial, sans-serif;
+}
+.text {
+  font-family: Verdana, sans-serif;
+}
+h1 {
+  font-family: "Times New Roman", serif;
+}
+h2 {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+button {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+ul li {
+  list-style: none;
+}
+
+.Navpart2 {
+  height: 8.4rem;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  cursor: pointer;
+}
+.atags {
+  width: 70%;
+}
+.atags ul {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.atags ul a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  cursor: pointer;
+  gap: 0;
+  font-size: 1.2rem;
+}
+
+
+.atags ul a{
+  text-decoration: none;
+  color:black;
+}
+
+a{
+  text-decoration: none;
+}
+
+.atags ul a:hover {
+  background-color: rgb(14, 14, 82);
+  color: white;
+}
+.bars {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: 0 30px;
+  cursor: pointer;
+  flex-direction: column;
+  text-align: end;
+}
+.bars i {
+  font-size: 40px;
+}
+
+.closeMenu {
+  position: relative;
+  display: none;
+  width: 70%;
+  height: 100vh;
+  flex-direction: column;
+  color: white;
+  background-color: white;
+  z-index: 1000;
+}
+
+.closeMenu ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  padding: 12px;
+    line-height: 40px;
+}
+
+.closeMenu ul li{
+  color:black;
+  border-bottom: 1px solid black;
+}
+.closeMenu ul li a {
+  cursor: pointer;
+  border-bottom: 1px solid black;
+  color:black;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+.closeMenu ul i {
+  align-self: flex-end;
+  font-size: 40px;
+  margin: 10px 10px 10px 10px;
+  cursor: pointer;
+}
+
+/* Designing slider part */
+.slider {
+  margin: auto;
+  height: 550px;
+  width: 100%;
+  display: grid;
+  overflow-x: auto;
+  overflow-y: none;
+  grid-template-columns: 100% 100% 100%;
+  grid-gap: 15px;
+  color: white;
+}
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-1,
+.slider-2,
+.slider-3 {
+  width: 100vw;
+}
+.slider-1 {
+  position: relative;
+  background-image: url("images/hero.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.slider-2 {
+  position: relative;
+  background-image: url("images/slider2.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.slider-3 {
+  position: relative;
+  background-image: url("images/slider3.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.dull-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ); /* Adjust the opacity by modifying the alpha value (0.5 in this example) */
+}
+
+.dull-overlay .container1 {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 40px;
+}
+.dull-overlay .container2 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin-right: 40px;
+}
+strong {
+  color: rgb(199, 18, 18);
+}
+.dull-overlay .container1 h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+.dull-overlay .container1 p {
+  width: 70%;
+  font-size: 1.2rem;
+  line-height: 30px;
+  margin-bottom: 1.9rem;
+}
+.dull-overlay .container1 .sliderbtns {
+  display: flex;
+  width: 70%;
+  flex-direction: row;
+  gap: 30px;
+}
+.dull-overlay .container1 .sliderbtns button {
+  padding: 15px;
+  font-size: 0.9rem;
+  width: 180px;
+  cursor: pointer;
+}
+.dull-overlay .container1 .sliderbtns .btn1 {
+  color: white;
+  background-color: rgb(199, 18, 18);
+  border: none;
+}
+.dull-overlay .container1 .sliderbtns .btn2:hover {
+  color: darkslategrey;
+  background-color: white;
+}
+.dull-overlay .container1 .sliderbtns .btn2 {
+  color: white;
+  background-color: rgb(0, 0, 0, 0);
+  border: 1px solid white;
+}
+.dull-overlay .container1 .sliderbtns .btn1:hover {
+  background-color: darkslategrey;
+}
+.about-section {
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  padding: 60px;
+  gap: 30px;
+}
+.about-section .content-column .inner-column .sec-title {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+.title {
+  width: 54px;
+  margin-top: 15px;
+  border-bottom: rgb(199, 18, 18) solid 4px;
+}
+.about-section .content-column .inner-column .text {
+  text-align: justify;
+  font-size: 1.2rem;
+  line-height: 30px;
+}
+
+.about-section .content-column .inner-column blockquote {
+  border-left: 5px solid rgb(199, 18, 18);
+  padding: 0 20px;
+}
+
+.about-section .content-column .inner-column blockquote p {
+  margin-left: 20px;
+  color: grey;
+  font-size: 1rem;
+  line-height: 30px;
+}
+.about-section .content-column .inner-column blockquote .icon i {
+  font-size: 31px;
+  color: grey;
+}
+.values {
+  position: relative;
+  background-image: url("images/slider1.jpg");
+  height: 400px;
+  background-size: 100% 100%;
+  color: white;
+}
+.core {
+  height: 100%;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.value {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.value i {
+  font-size: 56px;
+  color: rgb(199, 18, 18);
+  border: 1px solid rgb(199, 18, 18);
+  padding: 10px;
+  margin-bottom: 1rem;
+}
+.value i:hover {
+  color: white;
+  background-color: rgb(199, 18, 18);
+}
+.value h2 {
+  font-size: 1.6rem;
+  margin: 1rem 0;
+  font-weight: bolder;
+}
+.value p {
+  font-size: 0.8rem;
+  line-height: 20px;
+  text-align: center;
+}
+.x-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.brands .heading {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.brand {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+}
+.name-brand {
+  text-align: center;
+  color: white;
+  background-color: rgb(199, 18, 18);
+  width: 100%;
+  padding: 10px;
+}
+
+.form-jobs {
+  margin: 0;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+}
+.form-area {
+  padding: 50px;
+  width: 65%;
+  background-color: rgb(14, 14, 82);
+  color: white;
+  height: 100%;
+}
+
+.form-area .heading-form {
+  margin-bottom: 1.5rem;
+}
+.form-area .para-form {
+  line-height: 20px;
+  margin-bottom: 1rem;
+}
+form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.myform form input {
+  padding: 10px;
+  width: 45%;
+  border: none;
+}
+.myform form button {
+  width: 95%;
+  padding: 10px;
+  color: white;
+  background-color: rgb(199, 18, 18);
+  border: none;
+  font-size: 1rem;
+}
+.myform form button:hover {
+  background-color: darkslategray;
+}
+
+.jobs-area {
+  position: relative;
+  height: 100%;
+  width: 35%;
+  background-image: url("images/jobs-area.jpg");
+  background-size: 100% 100%;
+  color: white;
+}
+.jobs-area .dull-overlay {
+  padding: 50px;
+}
+
+.jobs-area .heading-jobs {
+  margin-bottom: 1.7rem;
+}
+.jobs-area .para-jobs {
+  line-height: 28px;
+}
+.jobs-area .btn2:hover {
+  color: darkslategrey;
+  background-color: white;
+}
+.jobs-area .btn2 {
+  color: white;
+  background-color: rgb(0, 0, 0, 0);
+  border: 1px solid white;
+  padding: 10px 20px;
+  margin-top: 1rem;
+}
+
+.contact {
+  height: 380px;
+  background-image: url("images/contact.jpg");
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact .conte {
+  padding: 15px;
+  background-color: black;
+  width: 75%;
+  height: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  opacity: 80%;
+}
+.conte .contact-heading {
+  font-size: 2.5rem;
+  color: white;
+}
+.conte p {
+  font-size: 1rem;
+  color: white;
+  width: 50%;
+  margin: 1.4rem 0;
+}
+.contact .btn1 {
+  color: white;
+  background-color: rgb(199, 18, 18);
+  border: none;
+  padding: 10px 29px;
+  opacity: 100%;
+  cursor: pointer;
+  margin-bottom: 1.2rem;
+}
+.contact .btn1:hover {
+  background-color: slategray;
+}
+
+.footer {
+  background-color: rgb(14, 14, 82);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  height: 400px;
+}
+.footer1 {
+  height: 80%;
+  padding: 40px;
+}
+.f {
+  height: 80%;
+  /* width: 100%; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.f1 {
+  height: 100%;
+  width: 40.8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 13px;
+  border-left: 1px dotted rgb(255, 255, 255);
+  border-right: 1px dotted rgb(255, 255, 255);
+  background-color: rgb(199, 18, 18);
+}
+.f1 .icon-f {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(14, 14, 82);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.f1 .icon-f i {
+  padding: 6px;
+  font-size: 20px;
+}
+.f1 .f-content {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer2 {
+  background-color: rgb(2, 2, 37);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 30%;
+
+}
+
+.footer2-child{
+  width: 70%;
+  margin:auto;
+}
+
+@media (max-width: 1060px) {
+  .about-section .image {
+    display: none;
+  }
+  .form-jobs{
+    flex-direction: column;
+    height: 900px;
+  }
+  .form-area {
+    padding: 50px;
+    width: 100%;
+    background-color: rgb(14, 14, 82);
+    color: white;
+    height: 100%;
+  }
+
+  
+  .jobs-area {
+    width: 100%;
+    
+  }
+
+}
+/* Ḥere We go with media Queries */
+@media (max-width: 900px) {
+  .Navpart2 {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+  .Navpart2 .atags {
+    display: none;
+  }
+  .bars {
+    display: flex;
+    justify-self: flex-end;
+  }
+  .dull-overlay .container1 h1 {
+    font-size: 1.6rem;
+  }
+  .dull-overlay .container1 p {
+    font-size: 1rem;
+  }
+  .dull-overlay .container1 .sliderbtns button {
+    padding: 10px;
+    font-size: 0.7rem;
+    width: 140px;
+    cursor: pointer;
+  }
+
+  .about-section {
+    height: 600px;
+  }
+
+  .about-section .image {
+    display: none;
+  }
+  .value i {
+    font-size: 40px;
+    padding: 8px;
+  }
+  .value h2 {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    font-weight: bolder;
+  }
+  .value p {
+    font-size: 0.5rem;
+    line-height: 20px;
+    text-align: center;
+  }
+  .contact {
+    height: 480px;
+  }
+  .contact .conte {
+    padding: 10px;
+    width: 90%;
+    height: 90%;
+  }
+  .conte .contact-heading {
+    font-size: 1.5rem;
+  }
+  .conte p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .contact .btn1 {
+    color: white;
+    background-color: rgb(199, 18, 18);
+    border: none;
+    padding: 10px 29px;
+    opacity: 100%;
+    cursor: pointer;
+    margin-bottom: 1.2rem;
+  }
+  .contact .btn1:hover {
+    background-color: slategray;
+  }
+  
+}
+
+@media (max-width: 860px) {
+  .brands {
+    flex-direction: column;
+  }
+  .brand {
+    padding: 30px;
+    width: 100%;
+  }
+  .footer {
+    height: 700px;
+  }
+  .footer1 {
+    height: 80%;
+    padding: 40px;
+  }
+  .f {
+    height: 90%;
+    flex-direction: column;
+  }
+  .f1 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 13px;
+    border-left: none;
+    border-right: none;
+  }
+  .f1 .icon-f {
+    height: 50px;
+    width: 50px;
+    background-color:  rgb(199, 18, 18);
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .f1 .icon-f i {
+    padding: 6px;
+    font-size: 20px;
+    color:rgb(14, 14, 82);;
+  }
+  .footer2 {
+    background-color: rgb(2, 2, 37);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 30%;
+  }
+  .footer2 p{
+    text-align: center;
+    font-size: 1rem;
+  }
+
+
+
+
+}
+@media (max-width: 760px) {
+  .values {
+    height: 900px;
+  }
+  .core {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .value {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .value i {
+    font-size: 56px;
+    color: rgb(199, 18, 18);
+    border: 1px solid rgb(199, 18, 18);
+    padding: 10px;
+    margin-bottom: 1rem;
+  }
+  .value i:hover {
+    color: white;
+    background-color: rgb(199, 18, 18);
+  }
+  .value h2 {
+    font-size: 1rem;
+    margin: 1rem 0;
+    font-weight: bolder;
+  }
+  .value p {
+    font-size: 0.7rem;
+    line-height: 20px;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .about-section {
+    height: 500px;
+    padding: 30px;
+  }
+  .about-section .content-column .inner-column .sec-title {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .about-section .content-column .inner-column .text {
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 23px;
+  }
+  .about-section .content-column .inner-column blockquote p {
+    font-size: 1.1rem;
+    line-height: 23px;
+  }
+  .about-section .content-column .inner-column blockquote .icon i {
+    font-size: 29px;
+    color: grey;
+  }
+}
+
+@media (max-width:450px)
+{
+    .Navpart1{
+        height: 50px;
+    }
+    .Navpart1 ul {
+        flex-direction: column;
+        margin: 1rem 0;
+    }
+    .Navpart1 ul li{
+        justify-content: flex-start;
+    }
+    .Navpart2{
+        height: 80px;
+    }
+
+    .slider .dull-overlay .container1
+    {
+        width: 80%;
+    }
+
+    .slider .dull-overlay .container1 .sliderbtns button{
+        width: 180px;
+    }
+
+    
+    .about-section {
+        height: 450px;
+      }
+      .about-section .content-column .inner-column .sec-title {
+        font-size: 0.7rem;
+        margin-bottom: 1.7rem;
+      }
+      
+      .about-section .content-column .inner-column .text {
+        text-align: center;
+        font-size: 0.7rem;
+        line-height: 22px;
+      }
+      
+      
+      .about-section .content-column .inner-column blockquote p {
+        
+        font-size: 0.8rem;
+        line-height: 23px;
+      }
+      .about-section .content-column .inner-column blockquote .icon i {
+        font-size: 31px;
+        color: grey;
+      }
+
+      .form-jobs {
+        height: 900px;
+      }
+      .form-area {
+        padding: 30px;
+        width: 100%;
+      }
+      
+      .form-area .heading-form {
+        margin-bottom: 1.2rem;
+      }
+      .form-area .para-form {
+        line-height: 20px;
+        margin-bottom: 1rem;
+      }
+      form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .myform form input {
+        padding: 10px;
+        width: 100%;
+        border: none;
+      }
+      .myform form button {
+        width: 100%;
+      }
+      
+      .jobs-area {
+        width: 100%;
+      }
+      .conte{
+        width: 90%;
+      }
+      .contact-heading{
+        font-size: 0.7rem;
+        text-align: center;
+      }
+      .contact-heading p{
+        width: 80%;
+      }
+
+
+
+
+
+}
