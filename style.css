@@ -120,6 +120,8 @@ a{
   color:black;
   width: 100%;
   border-bottom: 1px solid black;
+
+
 }
 .closeMenu ul i {
   align-self: flex-end;
@@ -550,6 +552,43 @@ form {
   margin:auto;
 }
 
+
+
+
+.contactform{
+  background-image: url("./images//stock.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.contactform h1{
+  font-size: 50px;
+  color:white;
+  font-weight: bolder;
+
+}
+
+.contactform button{
+  padding: 10px;
+  margin:10px;
+  border-radius: 5px;
+}
+
+.surplus{
+  color:rgb(199, 18, 18)
+}
+
+
+
+
+
+
 @media (max-width: 1060px) {
   .about-section .image {
     display: none;
@@ -708,6 +747,10 @@ form {
     text-align: center;
     font-size: 1rem;
   }
+
+
+
+
 
 
 
@@ -871,8 +914,13 @@ form {
         width: 80%;
       }
 
-
-
-
+      .contactform h1{
+        font-size: 30px;
+        color:white;
+        font-weight: bolder;
+      
+      }
 
 }
+
+
