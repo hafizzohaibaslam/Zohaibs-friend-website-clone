@@ -131,7 +131,7 @@ a{
 }
 
 /* Designing slider part */
-.slider {
+/* .slider {
   margin: auto;
   height: 550px;
   width: 100%;
@@ -144,49 +144,40 @@ a{
 }
 .slider::-webkit-scrollbar {
   display: none;
-}
+} */
 
-.slider-1,
-.slider-2,
-.slider-3 {
-  width: 100vw;
-}
 .slider-1 {
   position: relative;
-  background-image: url("images/hero.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  width: 100%;
+  height: 500px;
+  background-image: url(images/slider1.jpg); /* Default background image */
+  background-size: cover;
 }
-.slider-2 {
-  position: relative;
-  background-image: url("images/slider2.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-.slider-3 {
-  position: relative;
-  background-image: url("images/slider3.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
+
+
 .dull-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.8
-  ); /* Adjust the opacity by modifying the alpha value (0.5 in this example) */
+  background-color: rgba(0, 0, 0, 0.5);
 }
+
+/* .container1 {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 100px;
+  color: white;
+} */
+
 
 .dull-overlay .container1 {
   height: 100%;
   width: 60%;
   display: flex;
+  color:white;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
